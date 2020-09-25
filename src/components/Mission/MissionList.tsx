@@ -13,7 +13,7 @@ const MissionList:React.FC<Props> = ({data,handleIdChange})=>{
     return(
         <div className="list">
             <div className="card">
-            <h3>Space X Missions</h3>
+            <h3 >Space X Missions</h3>
             </div>
             <div className="list-group">
             {data.launches?.map((launchObj,ind)=>{
