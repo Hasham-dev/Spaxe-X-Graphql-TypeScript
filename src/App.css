@@ -8,6 +8,7 @@ html,body{
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  overflow-x: hidden;
 }
 .Sucess{
   color: rgb(105, 243, 105);
@@ -43,17 +44,67 @@ html,body{
   max-height: 100%;
   width: calc(100vw - 300px);
   overflow: hidden auto;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   padding-right: 20px;
+  overflow-x: hidden;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .launchProfile::before{
   content: "";
   /* background: url("https://source.unsplash.com/collection/190728/1600x900") no-repeat center center/cover ; */
-  background:  url("https://source.unsplash.com/1600x900/?space,space") no-repeat center center/cover ;
+  background:  url("https://source.unsplash.com/1600x900/?jupiter,mars ") no-repeat center center/cover ;
   position: absolute;
-  width: 100%;
+  width: 81vw;
   height: 100vh;
   z-index: -1;
   opacity: 0.4;
   overflow-x: hidden;
+  overflow-y: hidden;
+}
+.list{
+  overflow: scroll;
+  background-color: black;
+}
+.button:focus{
+background-color: rgba(0, 0, 255, 0.542) !important;
+color: white !important;
+}
+.button{
+  background-color: black !important;
+  color: white !important;
+  font-weight: 500 !important;
+}
+.card{
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+}
+.status{
+  font-weight: bold;
+  font-size: 30px;  
+}
+.container{
+  margin: 0 !important;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: purple; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
 }

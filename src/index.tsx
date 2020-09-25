@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ApolloClient, InMemoryCache ,ApolloProvider} from '@apollo/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const client = new ApolloClient({
   uri: 'http://spacexdata.herokuapp.com/graphql',

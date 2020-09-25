@@ -10,10 +10,12 @@ const MissionInfo: React.FC<Props> = ({ data }) => {
 
     console.log(data);
     return (
-        <div className="launchProfile">
-            <h3>Mission Details</h3>
+        <div className="launchProfile ">
+            <div className="container ">
+                <div className="card ">
+            <h1><u>Mission Details</u></h1>
             {/* {JSON.stringify(data)} */}
-            <span>{data.launch?.launch_success ? (
+            <span className="status">Mission: {data.launch?.launch_success ? (
                 <span className="Sucess">Sucess</span>
             ) : (
                     <span className="Failed">Failed</span>
@@ -24,15 +26,16 @@ const MissionInfo: React.FC<Props> = ({ data }) => {
                     ` (${data.launch?.rocket.rocket_name} | ${data.launch?.rocket.rocket_type})`}
             </h1>
             <p className="description">{data.launch?.details}</p>
-
+            </div>
 
             {!!data.launch?.links && !!data.launch?.links.flickr_images && (
                 <div className="image-list">
                     {data.launch?.links.flickr_images.map(image =>
-                        image ? <img src={image} className="image" key={image} /> : null,
+                        image ? <img src={image} className="image" key={image} alt={image}/> : null,
                     )}
                 </div>
             )}
+            </div>
         </div>
     )
 }

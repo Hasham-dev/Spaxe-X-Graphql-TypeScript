@@ -11,15 +11,17 @@ export interface OwnProps {
 
 const MissionList:React.FC<Props> = ({data,handleIdChange})=>{
     return(
-        <div>
-            <h3>Missions</h3>
-            <ol>
+        <div className="list">
+            <div className="card">
+            <h3>Space X Missions</h3>
+            </div>
+            <div className="list-group">
             {data.launches?.map((launchObj,ind)=>{
-                return <li onClick={()=> handleIdChange(ind!)} key={ind}>
+                return <button type="button" className="list-group-item list-group-item-action button" onClick={()=> handleIdChange(ind!)} key={ind}>
                     {launchObj?.mission_name}
-                </li>
+                </button>
             })}
-            </ol>
+            </div>
         </div>
     )
 }
