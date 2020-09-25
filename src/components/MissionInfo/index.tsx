@@ -1,6 +1,6 @@
 import React from 'react';
-import { useLaunchMissionInfoQuery, useMissionsInfoLazyQuery } from './../../generated/graphql'
-
+import { useLaunchMissionInfoQuery } from './../../generated/graphql'
+import MissionInfo from './MissionInfo'
 const MissionInfoContainer = () => {
     const { data, loading, error } = useLaunchMissionInfoQuery({
         variables: {
@@ -13,7 +13,7 @@ const MissionInfoContainer = () => {
         return <h1>Error..</h1>
     console.log(data);
     return (
-        <MissionList data={data} />
+        <MissionInfo data={data} />
     )
 }
 

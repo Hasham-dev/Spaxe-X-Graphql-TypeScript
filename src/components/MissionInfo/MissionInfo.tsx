@@ -6,18 +6,15 @@ interface Props{
     data:LaunchMissionInfoQuery
 }
 
-const MissionList:React.FC<Props> = ({data})=>{
+const MissionInfo:React.FC<Props> = ({data})=>{
+    
+    console.log(data);
     return(
         <div>
-            <ul>
-            {data.launches?.map((launchObj,ind)=>{
-                return <li key={ind}>
-                    {launchObj?.mission_name}
-                </li>
-            })}
-            </ul>
+            <h3>Mission Details</h3>
+            {JSON.stringify(data)}
         </div>
     )
 }
 
-export default MissionList;
+export default MissionInfo;

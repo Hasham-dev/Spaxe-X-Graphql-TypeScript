@@ -9,6 +9,7 @@ interface Props{
 const MissionList:React.FC<Props> = ({data})=>{
     return(
         <div>
+            <h3>Missions</h3>
             <ul>
             {data.launches?.map((launchObj,ind)=>{
                 return <li key={ind}>
