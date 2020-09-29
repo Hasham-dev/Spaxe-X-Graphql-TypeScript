@@ -25,11 +25,11 @@ jobs:
       with: 
         version: 12 
         
-    # - name: GitHub Action for Yarn
-    #   uses: borales/actions-yarn@v2.0.0
-    #   with:
-    #       # Yarn command
-    #     cmd: install
+    - name: GitHub Action for Yarn
+      uses: borales/actions-yarn@v2.0.0
+      with:
+          # Yarn command
+        cmd: install
       
     - name: creating build
       run: yarn build
